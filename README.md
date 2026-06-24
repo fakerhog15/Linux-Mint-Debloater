@@ -1,4 +1,4 @@
-text_content = """# Linux Mint Debloater
+# Linux Mint Debloater
 
 A simple, lightweight bash script designed to streamline Linux Mint by removing pre-installed software, tools, and heavy packages that many users don't need. This helps free up disk space, reduce background resource consumption, and provide a leaner operating system experience.
 
@@ -22,3 +22,5 @@ A simple, lightweight bash script designed to streamline Linux Mint by removing 
 ### Prerequisites
 
 You need `git` installed to clone this repository. If you don't have it, install it using:
+```bash
+sudo apt update && sudo apt install git -y
