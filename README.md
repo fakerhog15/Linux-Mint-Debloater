@@ -1,26 +1,69 @@
 # Linux Mint Debloater
 
-A simple, lightweight bash script designed to streamline Linux Mint by removing pre-installed software, tools, and heavy packages that many users don't need. This helps free up disk space, reduce background resource consumption, and provide a leaner operating system experience.
+A collection of Bash scripts to remove pre-installed packages from Linux Mint, freeing up disk space and reducing background resource usage. Comes in two flavors: a terminal-based interactive script and a GUI version using Zenity.
 
 ## ⚠️ Disclaimer
 
-**Use with caution!** Modifying system packages always carries an inherent risk. 
-* "Bloatware" is entirely subjective; what one user considers useless, another might consider a vital dependency. 
-* It is **highly recommended** that you create a system snapshot using **Timeshift** before running this script so you can easily revert changes if something breaks.
+Modifying system packages carries inherent risk. **Bloatware is subjective** — what one user considers useless, another may depend on. **Create a Timeshift snapshot** before running these scripts.
 
----
+## Scripts
 
-## ✨ Features
+| Script        | Interface      | Description                                                  |
+| ------------- | -------------- | ------------------------------------------------------------ |
+| `Terminal.sh` | Terminal (CLI) | Lists packages by number; select individually, type `all`, or quit. After removal, offers to install a browser. |
+| `GuiMenu.sh`  | GUI (Zenity)   | Checklist dialog to pick packages. Shows a progress bar during removal. Offers browser installation at the end. |
 
-- **Package Purging:** Uninstalls unnecessary apps (e.g., specific media players, games, drawing tools, or chat clients depending on your script configuration).
-- **Residual Cleanup:** Automatically runs `apt autoremove` and `apt autoclean` to purge left-over system dependencies and cache.
-- **System Update:** Updates package repositories and upgrades existing packages to make sure your system remains stable post-debloat.
-- **Minimalistic & Fast:** Pure shell execution without unnecessary overhead.
+## Packages Removed
 
-## 🚀 Getting Started
+- `firefox` — Default web browser
+- `libreoffice-core`, `libreoffice-common` — Office suite
+- `thunderbird` — Email client
+- `hexchat` — IRC client
+- `transmission-gtk` — BitTorrent client
+- `rhythmbox` — Music player
+- `celluloid` — Video player
+- `hypnotix` — IPTV player
+- `pix` — Image viewer/organizer
+- `simple-scan` — Document scanner
+- `drawing` — Image editor
+- `gnote` — Note-taking app
+- `xreader` — Document viewer
+- `redshift` — Blue-light filter
+- `baobab` — Disk usage analyzer
+- `seahorse` — Passwords & keys manager
+- `warpinator` — LAN file transfer
+- `onboard` — On-screen keyboard
+- `gnome-calendar`, `gnome-logs`, `gnome-power-manager` — GNOME utilities
+- `webapp-manager` — Web app manager
+- `thingy` — Device manager
 
-### Prerequisites
+## Optional Browser Installation
 
-You need `git` installed to clone this repository. If you don't have it, install it using:
+After debloating, you can install one of these browsers:
+
+| Browser                              | Description                                  |
+| ------------------------------------ | -------------------------------------------- |
+| **LibreWolf**                        | Privacy-focused Firefox fork (official repo) |
+| **Helium**                           | Lightweight privacy browser (apt repo)       |
+| **Zen Browser** *(Terminal.sh only)* | Privacy-oriented browser (official script)   |
+| **Brave Nightly**                    | Cutting-edge Brave (official repo)           |
+
+## Usage
+
 ```bash
-sudo apt update && sudo apt install git -y
+git clone https://github.com/fakerhog15/Linux-Mint-Debloater.git
+cd Linux-Mint-Debloater
+chmod +x Terminal.sh GuiMenu.sh
+
+# Terminal mode
+./Terminal.sh
+
+# GUI mode (requires zenity, installed automatically if missing)
+./GuiMenu.sh
+```
+
+## What the Scripts Do
+
+1. **Purge** selected packages with `apt purge`
+2. **Clean up** residual dependencies with `apt autoremove --purge` and `apt clean`
+3. **Offer** to install a replacement browser (optional)
