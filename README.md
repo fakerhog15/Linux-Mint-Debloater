@@ -1,80 +1,24 @@
-# Linux Mint Debloater
+text_content = """# Linux Mint Debloater
 
-A simple shell script to remove unwanted pre-installed packages from Linux Mint, with an option to install a privacy-focused replacement browser afterward.
+A simple, lightweight bash script designed to streamline Linux Mint by removing pre-installed software, tools, and heavy packages that many users don't need. This helps free up disk space, reduce background resource consumption, and provide a leaner operating system experience.
 
-Available in two forms:
-- **Terminal version** (`Terminal.sh`) — plain command-line prompts
-- **GUI version** (`GuiMenu.sh`) — graphical menus via `zenity`
+## ⚠️ Disclaimer
 
-## What it removes
+**Use with caution!** Modifying system packages always carries an inherent risk. 
+* "Bloatware" is entirely subjective; what one user considers useless, another might consider a vital dependency. 
+* It is **highly recommended** that you create a system snapshot using **Timeshift** before running this script so you can easily revert changes if something breaks.
 
-- Firefox
-- LibreOffice (core + common)
-- Thunderbird
-- Hexchat
-- Transmission
-- Rhythmbox
-- Celluloid
-- Hypnotix
-- Pix
-- Simple Scan
-- Drawing
-- Gnote
-- Xreader
-- Redshift
-- Baobab
-- Seahorse
-- Warpinator
-- Onboard
-- GNOME Calendar, Logs & Power Manager
-- Webapp Manager
-- Thingy
+---
 
-## Features
+## ✨ Features
 
-- **Selective removal** – pick individual packages, or remove everything at once
-- **Full cleanup** – runs `apt autoremove --purge` and `apt clean` to remove leftover dependencies and cached package files
-- **Browser replacement** – after debloating, optionally install one of:
-  - LibreWolf
-  - Helium Browser
-  - Zen Browser
-  - Brave Nightly
+- **Package Purging:** Uninstalls unnecessary apps (e.g., specific media players, games, drawing tools, or chat clients depending on your script configuration).
+- **Residual Cleanup:** Automatically runs `apt autoremove` and `apt autoclean` to purge left-over system dependencies and cache.
+- **System Update:** Updates package repositories and upgrades existing packages to make sure your system remains stable post-debloat.
+- **Minimalistic & Fast:** Pure shell execution without unnecessary overhead.
 
-## Requirements
+## 🚀 Getting Started
 
-- Linux Mint (may also work on Ubuntu-based derivatives, untested)
-- `sudo` privileges
-- `zenity` installed, if using the GUI version
+### Prerequisites
 
-## Usage
-
-### Terminal version
-
-```bash
-chmod +x Terminal.sh
-./Terminal.sh
-```
-
-### GUI version
-
-```bash
-sudo apt install zenity   # if not already installed
-chmod +x GuiMenu.sh
-./GuiMenu.sh
-```
-
-Follow the on-screen prompts to select which packages to remove and, optionally, which browser to install in place of Firefox.
-
-## Notes
-
-- Firefox and LibreOffice are included in the removal list — only run this if you're sure you don't need them.
-- Since Firefox is removed, installing a replacement browser is recommended. The script offers several privacy-focused options.
-- Tested on Linux Mint. Behavior on other Ubuntu-based distros is not guaranteed.
-
-## License
-
-No license specified. Contact the repository owner if you'd like to use this under a specific license.
-
-## Disclaimer
-
-This script removes system packages using `apt`. Review the package list before running it, and use at your own risk.
+You need `git` installed to clone this repository. If you don't have it, install it using:
