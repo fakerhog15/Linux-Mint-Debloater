@@ -2,7 +2,7 @@
   <img src="linux_mint_icon.png" alt="Linux Mint" width="100"/>
 </p>
 
-# Linux Mint Debloater
+                               # Linux Mint Debloater
 
 A simple script to remove unwanted pre-installed packages from Linux Mint and optionally install a replacement browser.
 
