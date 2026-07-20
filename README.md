@@ -1,4 +1,6 @@
-<img width="500" height="500" alt="New Project" src="https://github.com/user-attachments/assets/a5c4b2ae-845d-44bc-a40a-5fd781a3abcb" style="border-radius: 0;" />
+<p align="center">
+  <img width="300" alt="New Project" src="https://github.com/user-attachments/assets/a5c4b2ae-845d-44bc-a40a-5fd781a3abcb" />
+</p>
 <div align="center">
   <h1>Linux Mint Debloater</h1>
   <p>Strip the bloat. Keep the speed.</p>
