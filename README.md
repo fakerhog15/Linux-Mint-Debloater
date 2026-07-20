@@ -1,3 +1,4 @@
+<img width="1000" height="1000" alt="New Project" src="https://github.com/user-attachments/assets/80d41a43-5a94-4bbe-ac6a-4a072edfa8e4" />
 <div align="center">
   <img src="linux_mint_icon.png" alt="Linux Mint" width="100"/>
   <h1>Linux Mint Debloater</h1>
