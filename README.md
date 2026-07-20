@@ -1,37 +1,36 @@
-<div align="center">
-  <img src="New%20Project.png" alt="Linux Mint Debloater Logo" width="400">
+# Linux Mint Debloater
 
-  # Linux Mint Debloater
-  
-  *A simple, effective tool to strip away unnecessary pre-installed software and optimize your Linux Mint experience.*
-</div>
+![Linux Mint Debloater Logo](https://raw.githubusercontent.com/fakerhog15/Linux-Mint-Debloater/main/logo.png)
+
+A lightweight, customizable tool designed to remove unnecessary pre-installed software from Linux Mint, reduce background resource usage, and give you a clean foundation for deeper customization.
 
 ---
 
 ## 🚀 Overview
 
-**Linux Mint Debloater** is designed to clean up a fresh installation of Linux Mint. While Mint is an excellent operating system out of the box, it comes with several default applications that might just get in the way. This script helps you safely remove that extra weight, lowering background RAM usage and keeping your application menu clean. 
+**Linux Mint Debloater** helps streamline a fresh Linux Mint installation by removing default applications that many users never touch.  
+Mint is already great out of the box — but if you want a cleaner system, lower RAM usage, or a more minimal application menu, this script gives you that head start.
 
-It provides the perfect blank canvas if you want to dive into deep desktop customization—whether that means building a perfectly sharp, boxy UI, setting up custom OLED black themes with bright blue accents, or just maximizing performance for your hardware.
+It’s especially useful if you’re building a highly customized desktop environment, whether that means:
+
+- A sharp, boxy UI  
+- OLED‑optimized black themes  
+- Deep blue accent setups  
+- Or simply maximizing performance on lightweight hardware
+
+---
 
 ## ✨ Features
 
-* **Lightweight:** Removes unnecessary default applications (like redundant media players and unused system tools).
-* **Resource Friendly:** Frees up disk space and reduces background processes so your CPU can focus on what matters.
-* **Customizable:** Easily edit the script to keep the specific apps you actually rely on.
-* **Safe:** Targets non-essential user-space applications to ensure your core system remains completely stable.
+- **Lightweight Cleanup** — Removes non-essential default applications such as redundant media tools and unused utilities.
+- **Resource Friendly** — Reduces background processes and frees disk space, improving responsiveness.
+- **Fully Customizable** — Edit the script to keep any apps you personally rely on.
+- **Safe by Design** — Only targets user-space packages; core system components remain untouched.
 
-## ⚠️ Disclaimer
+---
 
-**Please review the script before running it.** 
-What one person considers "bloatware," another might consider essential. Open the script in a text editor, read through the list of packages marked for removal, and comment out (`#`) anything you want to keep. 
+## ⚙️ How to Use
 
-*Use at your own risk. It is always best practice to create a Timeshift backup before making bulk changes to your system packages.*
-
-## ⚙️ Usage
-
-To run the debloater, follow these steps in your terminal:
-
-1. **Clone the repository:**
+1. Download or clone the repository:
    ```bash
-   git clone [https://github.com/fakerhog15/Linux-Mint-Debloater.git](https://github.com/fakerhog15/Linux-Mint-Debloater.git)
+   git clone https://github.com/fakerhog15/Linux-Mint-Debloater
