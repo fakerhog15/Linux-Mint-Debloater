@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="linux_mint_icon.png" alt="Linux Mint" width="100"/>
   <h1>Linux Mint Debloater</h1>
   <p>Strip the bloat. Keep the speed.</p>
   <p>
